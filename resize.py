@@ -3,6 +3,7 @@ import tkinter as tk
 from tkinter import filedialog
 from PIL import Image, ImageTk
 
+#GUIの配置設定
 app = tk.Tk()
 app.geometry('300x200')
 app.title('画像リサイズ')
@@ -25,7 +26,7 @@ txt2.place(x=90, y=70)
 def btn_click1():
     global width_size
     global height_size
-    width_size, height_size = txt1.get(), txt2.get()
+    width_size, height_size = txt1.get(), txt2.get() # リサイズしたい横幅,縦幅
     lb1_2 = tk.Label(text=f'横幅: {width_size}')
     lb1_2.place(x=60, y=100)
     lb2_2 = tk.Label(text=f'縦幅: {height_size}')
